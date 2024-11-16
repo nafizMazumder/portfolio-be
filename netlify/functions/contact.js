@@ -1,3 +1,4 @@
+// netlify/functions/contact.js
 const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
@@ -52,7 +53,7 @@ const createRawMessage = (to, subject, message) => {
     return Buffer.from(email).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 };
 
-app.post('/api/contact', async (req, res) => {
+app.post('/', async (req, res) => {
     const { name, email, message } = req.body;
 
     try {
