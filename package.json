@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "netlify/functions/contact.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,9 +12,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "express-serverless": "^1.0.0",
     "googleapis": "^144.0.0",
-    "nodemailer": "^6.9.16"
+    "netlify-lambda": "^2.0.16",
+    "nodemailer": "^6.9.16",
+    "serverless-http": "^3.2.0"
   },
-  "devDependencies": {},
   "description": ""
 }
