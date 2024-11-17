@@ -62,7 +62,10 @@ app.post('/.netlify/functions/contact', async (req, res) => { // Ensure the path
         const emailResponse = await sendEmail(to, subject, `You have a new message from ${name} (${email}):\n\n${message}`);
 
         console.log('Email sent:', emailResponse);
-        res.status(200).json({ success: true, message: 'Message sent successfully' });
+        res.status(200).json({
+            success: true,
+            message: `Thank you ${name} for contacting me! I’ve received your message and will get back to you as soon as possible.`
+        });
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).json({ success: false, message: 'Error sending email' });
